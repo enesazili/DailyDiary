@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingVertical="6dp">
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceBodyMedium"
+        android:textStyle="bold"
+        tools:text="15" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot_task"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/bg_dot_task" />
+
+        <View
+            android:id="@+id/dot_routine"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginEnd="3dp"
+            android:background="@drawable/bg_dot_routine" />
+
+        <View
+            android:id="@+id/dot_journal"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/bg_dot_journal" />
+    </LinearLayout>
+</LinearLayout>

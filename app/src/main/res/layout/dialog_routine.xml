@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/routine_title_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_routine_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/routine_description_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_routine_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/routine_schedule_label"
+            android:textAppearance="?attr/textAppearanceTitleSmall"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <RadioGroup
+            android:id="@+id/group_routine_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_schedule_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/routine_schedule_every_day" />
+
+            <RadioButton
+                android:id="@+id/radio_schedule_weekdays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/routine_schedule_weekdays" />
+
+            <RadioButton
+                android:id="@+id/radio_schedule_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/routine_schedule_custom" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/layout_custom_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_monday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_tuesday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_wednesday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_thursday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_friday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_saturday" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/check_day_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_sunday" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_routine_dialog_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/routine_active" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.dailydiary.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.dailydiary.ui.calendar.CalendarFragment"
+        android:label="@string/nav_calendar"
+        tools:layout="@layout/fragment_calendar">
+        <action
+            android:id="@+id/action_calendarFragment_to_dayDetailFragment"
+            app:destination="@id/dayDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dayDetailFragment"
+        android:name="com.example.dailydiary.ui.calendar.DayDetailFragment"
+        android:label="@string/day_detail_title"
+        tools:layout="@layout/fragment_day_detail">
+        <argument
+            android:name="localDate"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dayDetailFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.example.dailydiary.ui.journal.JournalFragment"
+        android:label="@string/journal_title"
+        tools:layout="@layout/fragment_journal">
+        <argument
+            android:name="localDate"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/remindersFragment"
+        android:name="com.example.dailydiary.ui.reminders.RemindersFragment"
+        android:label="@string/nav_reminders"
+        tools:layout="@layout/fragment_reminders" />
+
+    <fragment
+        android:id="@+id/routinesFragment"
+        android:name="com.example.dailydiary.ui.routines.RoutinesFragment"
+        android:label="@string/nav_routines"
+        tools:layout="@layout/fragment_routines" />
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.example.dailydiary.ui.more.MoreFragment"
+        android:label="@string/nav_more"
+        tools:layout="@layout/fragment_more" />
+</navigation>

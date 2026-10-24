@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="@string/nav_dashboard" />
+    <item
+        android:id="@+id/calendarFragment"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/nav_calendar" />
+    <item
+        android:id="@+id/remindersFragment"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="@string/nav_reminders" />
+    <item
+        android:id="@+id/routinesFragment"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="@string/nav_routines" />
+    <item
+        android:id="@+id/moreFragment"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="@string/nav_more" />
+</menu>
